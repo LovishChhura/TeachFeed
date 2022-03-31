@@ -1,1 +1,8 @@
+# pip install -r requirements.txt
+# python -m django --version
+
+
 django==4.0.3
+# mysqlclient==8.0.27
+pip install mysqlclient
+pip install python-decouple
