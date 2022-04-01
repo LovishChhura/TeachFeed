@@ -5,15 +5,15 @@
 <!--Displaying form here-->
 
 <div class="container" id="accessCode">
-    <form>
+    <form action="/login/" method="post">
       <div class="mb-3">
         <label for="acscode" class="form-label" style="padding-top: 7px;"><h3>Access Code &#9996; </h3></label>
-        <input type="text" class="form-control" id="acscode" aria-describedby="acscode">
+        <input type="text" class="form-control" id="acscode" name="acscode" aria-describedby="acscode">
         <div id="acscode1" class="form-text">Don't share your Access Code.</div>
       </div>
       
       {% csrf_token %}
-      <button type="submit" class="btn btn-primary" >Submit</button>
+      <button type="submit" class="btn btn-primary" value="OK">Submit</button>
     </form>
   </div>
   
