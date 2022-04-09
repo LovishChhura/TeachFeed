@@ -28,6 +28,13 @@
     border-radius: 7%;
 }
 
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    
+}
+
 
 
 /*Css for branch page*/
