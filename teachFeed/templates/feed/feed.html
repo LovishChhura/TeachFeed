@@ -1,7 +1,193 @@
 {% extends 'base.html' %}
 
+{% block cssFiles %}
+<link rel="stylesheet" href="../../static/feedStyle.css">
+<link rel="stylesheet" href="../../static/range.css">
+{% endblock cssFiles %}
+
 {% block title %}feed{% endblock title %}
 {% block body %}
-<h1> Home page of feed</h1>
+<div class="container" id="">
+    <form id="regForm" action="">
+
+        <h1 style="text-align:center;">Feedback:</h1>
+        <hr />
+        <div class="tab mb-3">
+            <h5><em>Enter basic Details</em></h5>
+            <hr />
+            <label for="branch">Choose Your Branch:</label>
+            <select name="branch" id="branch">
+                <option value="none">---</option>
+                <option value="it">IT</option>
+                <option value="cse">CSE</option>
+                <option value="ece">ECE</option>
+                <option value="ce">CE</option>
+                <option value="me">ME</option>
+                <option value="bca">BCA</option>
+                <option value="bcom">B.COM</option>
+                <option value="BBA">BBA</option>
+                <option value="mba">MBA</option>
+            </select>
+            <br><br>
+            <label for="depTeach">Department of teacher:</label>
+            <select name="depTeach" id="depTeach">
+                <option value="none">---</option>
+                <option value="it">IT</option>
+                <option value="cse">CSE</option>
+                <option value="ece">ECE</option>
+                <option value="ce">CE</option>
+                <option value="me">ME</option>
+                <option value="bca">BCA</option>
+                <option value="bcom">B.COM</option>
+                <option value="BBA">BBA</option>
+                <option value="mba">MBA</option>
+            </select>
+            <br><br>
+            <label for="teacherName">Teacher's name:</label>
+            <select name="teacherName" id="teacherName">
+                <option value="none">---</option>
+                <option value="teacher1">Teacher1</option>
+                <option value="teacher2">Teacher2</option>
+            </select>
+            <br><br>
+            <label for="sem">Semester:</label>
+            <select name="sem" id="sem">
+                <option value="none">---</option>
+                <option value="s1">1st</option>
+                <option value="s2">2nd</option>
+                <option value="s3">3rd</option>
+                <option value="s4">4th</option>
+                <option value="s5">5th</option>
+                <option value="s6">6th</option>
+                <option value="s7">7th</option>
+                <option value="s8">8th</option>
+            </select>
+            <br><br>
+            <label for="subject">Subject:</label>
+            <select name="subject" id="subject">
+                <option value="none">---</option>
+                <option value="subject1">subject1</option>
+                <option value="subject2">subject2</option>
+            </select>
+            <br><br>
+        </div>
+
+        <!--<div class="tab">Contact Info:
+        <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
+        <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+      </div>-->
+
+        <div class="tab mb-3">
+            <label for="" class="form-label">1: There was positive interaction between students and teachers
+                ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">2: Soft skill of subject in-charge in handling of contents ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">3: Online learning materials /notes provided by the subject in-charge in
+                enchancing my understanding of the subject ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">4: The teacher thoroughly answered the students questions ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+
+        </div>
+
+
+        <!--<div class="tab">Birthday:
+        <p><input placeholder="dd" oninput="this.className = ''"></p>
+        <p><input placeholder="mm" oninput="this.className = ''"></p>
+        <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+      </div>-->
+
+        <div class="tab mb-3">
+            <label for="" class="form-label">5: There was positive interaction between students and teachers
+                ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">6: Quality of work was emphasized more than quatity ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">7: You were encouraged to do extra reading about the course material
+                ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">8: The teacher gave assignments that were useful for learning subject
+                matter ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+
+        </div>
+
+        <!--<div class="tab">Login Info:
+        <p><input placeholder="Username..." oninput="this.className = ''"></p>
+        <p><input placeholder="Password..." oninput="this.className = ''"></p>
+      </div>-->
+
+        <div class="tab mb-3">
+            <label for="" class="form-label">9: Student were free to interrupt presentations if points needed
+                clarification ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">10: The MST's were appropriately framed covering all topics of syllabus
+                ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">11: Lectures were held regularly and on time ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">12: Students were introduced regarding certifications /Registrations for
+                MOOC's based online course .</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+
+        </div>
+
+        <div class="tab mb-3">
+            <label for="" class="form-label">13: Students were introduced with the relevent information on "Vitual Labs"
+                for the course ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">14: course curriculum is updated completely ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+            <label for="" class="form-label">15: All the contemporary topics related to fields are discussed thoroughly
+                ?</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <br />
+
+
+        </div>
+
+        <div style="overflow:auto;">
+            <div style="float:right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </div>
+        </div>
+
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+
+    </form>
+</div>
+
+
+
+
+
+
+{% block jsFile %}
+<script src="../../static/js/feedScript.js"></script>
+<script src="../../static/js/range.js"></script>
+{% endblock jsFile %}
 
 {% endblock body %}
