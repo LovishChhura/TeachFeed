@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import MinLengthValidator
+from django.core.validators import MinLengthValidator, MaxValueValidator, MinValueValidator
 # Create your models here.
 class Department(models.Model):
     sno = models.AutoField(primary_key=True)
@@ -36,3 +36,33 @@ class Subject(models.Model):
 
     def __str__(self):
         return self.name
+
+class Tfeed(models.Model):
+    sno = models.AutoField(primary_key=True)
+    branch = models.CharField(
+        max_length=100,
+        help_text='Enter a Department (e.g. IT)',
+        validators=[MinLengthValidator(2, "Make must be greater than 1 character")]
+    )
+    dep = models.ForeignKey('Department', on_delete=models.SET_NULL, null=True,
+                                   help_text='Department under which this subject comes')
+    teach = models.ForeignKey('Teacher', on_delete=models.SET_NULL, null=True,
+                                help_text='Teacher teaching this subject')
+    sem = models.IntegerField(help_text='Sem of student eg.1')
+    sub = models.ForeignKey('Subject', on_delete=models.SET_NULL, null=True,
+                                   help_text='Department under which this subject comes')
+    interact = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    softSkill = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    notes = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    ans = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    pInteract = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    quality = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    extra = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    assignment = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    interrupt = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    mst = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    lecture = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    mooc = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)],help_text='1-10')
+    virtualLab = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    curriculum = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    topic = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
