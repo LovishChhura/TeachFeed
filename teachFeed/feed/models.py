@@ -37,20 +37,29 @@ class Subject(models.Model):
     def __str__(self):
         return self.name
 
-class Tfeed(models.Model):
+class Feed(models.Model):
     sno = models.AutoField(primary_key=True)
     branch = models.CharField(
         max_length=100,
         help_text='Enter a Department (e.g. IT)',
         validators=[MinLengthValidator(2, "Make must be greater than 1 character")]
     )
-    dep = models.ForeignKey('Department', on_delete=models.SET_NULL, null=True,
-                                   help_text='Department under which this subject comes')
-    teach = models.ForeignKey('Teacher', on_delete=models.SET_NULL, null=True,
-                                help_text='Teacher teaching this subject')
-    sem = models.IntegerField(help_text='Sem of student eg.1')
-    sub = models.ForeignKey('Subject', on_delete=models.SET_NULL, null=True,
-                                   help_text='Department under which this subject comes')
+    depTeach = models.CharField(
+        max_length=100,
+        help_text='Enter a Department (e.g. IT)',
+        validators=[MinLengthValidator(2, "Make must be greater than 1 character")]
+    )
+    teacherName = models.CharField(
+        max_length=100,
+        help_text='Enter a Teacher\'s name',
+        validators=[MinLengthValidator(2, "Make must be greater than 1 character")]
+    )
+    sem = models.IntegerField(help_text='Sem of student (e.g. 1')
+    subject = models.CharField(
+        max_length=100,
+        help_text='Enter a Subject (e.g. DSA)',
+        validators=[MinLengthValidator(2, "Make must be greater than 1 character")]
+    )
     interact = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
     softSkill = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
     notes = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
@@ -66,3 +75,7 @@ class Tfeed(models.Model):
     virtualLab = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
     curriculum = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
     topic = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+
+    def __str__(self):
+        x=str(self.sno)
+        return x

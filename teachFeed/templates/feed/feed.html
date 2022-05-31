@@ -8,7 +8,7 @@
 {% block title %}feed{% endblock title %}
 {% block body %}
 <div class="container" id="">
-    <form id="regForm" action="">
+    <form id="regForm" action="/feed/" method="POST"> {% csrf_token %}
 
         <h1 style="text-align:center;">Feedback:</h1>
         <hr />
@@ -32,15 +32,15 @@
             <label for="depTeach">Department of teacher:</label>
             <select name="depTeach" id="depTeach">
                 <option value="none">---</option>
-                <option value="it">IT</option>
-                <option value="cse">CSE</option>
-                <option value="ece">ECE</option>
-                <option value="ce">CE</option>
-                <option value="me">ME</option>
-                <option value="bca">BCA</option>
-                <option value="bcom">B.COM</option>
+                <option value="IT">IT</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="CE">CE</option>
+                <option value="ME">ME</option>
+                <option value="BCA">BCA</option>
+                <option value="BCOM">B.COM</option>
                 <option value="BBA">BBA</option>
-                <option value="mba">MBA</option>
+                <option value="MBA">MBA</option>
             </select>
             <br><br>
             <label for="teacherName">Teacher's name:</label>
@@ -53,14 +53,14 @@
             <label for="sem">Semester:</label>
             <select name="sem" id="sem">
                 <option value="none">---</option>
-                <option value="s1">1st</option>
-                <option value="s2">2nd</option>
-                <option value="s3">3rd</option>
-                <option value="s4">4th</option>
-                <option value="s5">5th</option>
-                <option value="s6">6th</option>
-                <option value="s7">7th</option>
-                <option value="s8">8th</option>
+                <option value="1">1st</option>
+                <option value="2">2nd</option>
+                <option value="3">3rd</option>
+                <option value="4">4th</option>
+                <option value="5">5th</option>
+                <option value="6">6th</option>
+                <option value="7">7th</option>
+                <option value="8">8th</option>
             </select>
             <br><br>
             <label for="subject">Subject:</label>
@@ -78,19 +78,19 @@
       </div>-->
 
         <div class="tab mb-3">
-            <label for="" class="form-label">1: There was positive interaction between students and teachers
+            <label for="interact" class="form-label">1: There was positive interaction between students and teachers
                 ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="interact" name="interact" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">2: Soft skill of subject in-charge in handling of contents ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <label for="softSkill" class="form-label">2: Soft skill of subject in-charge in handling of contents ?</label><br />
+            <input type="number" id="softSkill" name="softSkill" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">3: Online learning materials /notes provided by the subject in-charge in
+            <label for="notes" class="form-label">3: Online learning materials /notes provided by the subject in-charge in
                 enchancing my understanding of the subject ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="notes" name="notes" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">4: The teacher thoroughly answered the students questions ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <label for="ans" class="form-label">4: The teacher thoroughly answered the students questions ?</label><br />
+            <input type="number" id="ans" name="ans" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
 
         </div>
@@ -103,20 +103,20 @@
       </div>-->
 
         <div class="tab mb-3">
-            <label for="" class="form-label">5: There was positive interaction between students and teachers
+            <label for="pInteract" class="form-label">5: There was positive interaction between students and teachers
                 ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="pInteract" name="pInteract" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">6: Quality of work was emphasized more than quatity ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <label for="quality" class="form-label">6: Quality of work was emphasized more than quatity ?</label><br />
+            <input type="number" id="quality" name="quality" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">7: You were encouraged to do extra reading about the course material
+            <label for="extra" class="form-label">7: You were encouraged to do extra reading about the course material
                 ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="extra" name="extra" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">8: The teacher gave assignments that were useful for learning subject
+            <label for="assignment" class="form-label">8: The teacher gave assignments that were useful for learning subject
                 matter ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="assignment" name="assignment" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
 
         </div>
@@ -127,35 +127,35 @@
       </div>-->
 
         <div class="tab mb-3">
-            <label for="" class="form-label">9: Student were free to interrupt presentations if points needed
+            <label for="interrupt" class="form-label">9: Student were free to interrupt presentations if points needed
                 clarification ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="interrupt" name="interrupt" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">10: The MST's were appropriately framed covering all topics of syllabus
+            <label for="mst" class="form-label">10: The MST's were appropriately framed covering all topics of syllabus
                 ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="mst" name="mst" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">11: Lectures were held regularly and on time ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <label for="lecture" class="form-label">11: Lectures were held regularly and on time ?</label><br />
+            <input type="number" id="lecture" name="lecture" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">12: Students were introduced regarding certifications /Registrations for
+            <label for="mooc" class="form-label">12: Students were introduced regarding certifications /Registrations for
                 MOOC's based online course .</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="mooc" name="mooc" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
 
         </div>
 
         <div class="tab mb-3">
-            <label for="" class="form-label">13: Students were introduced with the relevent information on "Vitual Labs"
+            <label for="virtualLab" class="form-label">13: Students were introduced with the relevent information on "Vitual Labs"
                 for the course ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="virtualLab" name="virtualLab" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">14: course curriculum is updated completely ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <label for="curriculum" class="form-label">14: course curriculum is updated completely ?</label><br />
+            <input type="number" id="curriculum" name="curriculum" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="" class="form-label">15: All the contemporary topics related to fields are discussed thoroughly
+            <label for="topic" class="form-label">15: All the contemporary topics related to fields are discussed thoroughly
                 ?</label><br />
-            <input type="number" id="quantity" name="quantity" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="topic" name="topic" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
 
 
