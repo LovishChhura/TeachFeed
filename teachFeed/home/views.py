@@ -21,5 +21,8 @@ def login(request):
 
     return redirect('home')
 
+def logout(request):
+    return redirect('home')
+
 def extra(request):
     return HttpResponse('This is extra')

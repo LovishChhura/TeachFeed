@@ -6,6 +6,13 @@
 {% endblock cssFiles %}
 
 {% block title %}feed{% endblock title %}
+{% block login %}
+<form class="d-flex">
+
+    <a href="/logout" role="button"  class="btn btn-outline-primary m-2 my-sm-0 " >
+      Logout </a>
+  </form>
+{% endblock login %}
 {% block body %}
 <div class="container" id="">
     <form id="regForm" action="/feed/" method="POST"> {% csrf_token %}

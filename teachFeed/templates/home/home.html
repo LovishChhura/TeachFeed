@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 
 {% block title %}teachFeed{% endblock title %}
+{% block login %}
+<form class="d-flex">
+  <a href="/" role="button" target="_blank" class="btn btn-outline-primary m-2 my-sm-0 " >
+    Tlogin </a>
+
+  <a href="/admin" role="button" target="_blank" class="btn btn-outline-primary m-2 my-sm-0 " >
+    Admin </a>
+</form>
+{% endblock login %}
 {% block body %}
 
 <!--displaying logo here -->
