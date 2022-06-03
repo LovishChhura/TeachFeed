@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import Department, Teacher, Subject, Feed
 # Create your views here.
 def feed(request):
@@ -31,6 +31,9 @@ def feed(request):
         feed=Feed(branch=branch, depTeach=depTeach, teacherName=teacherName,  sem=sem,subject=subject, interact=interact, softSkill=softSkill,notes=notes, ans=ans, pInteract=pInteract, quality=quality, extra=extra, assignment=assignment, interrupt=interrupt, mst=mst, lecture=lecture, mooc=mooc, virtualLab=virtualLab, curriculum=curriculum, topic=topic)
 
         feed.save()
-        return HttpResponse("Success")
+        return redirect("thanks")
 
     return render(request,"feed/feed.html",params)
+
+def thanks(request):
+    return render(request,"feed/thanks.html")

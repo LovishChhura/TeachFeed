@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}teachFeed{% endblock title %}
+{% block login %}
+<form class="d-flex">
+
+
+    <a href="/logout" role="button"  class="btn btn-outline-primary m-2 my-sm-0 ">
+        Logout </a>
+</form>
+{% endblock login %}
+{% block body %}
+
+
+
+<!--Displaying Success Message here-->
+
+<div class="container" id=""
+    style="background-color: #ffffff; border: 2px solid #000000; border-radius: 5px; margin-top: 5px">
+    <h1 style="color: #33cc33;">Success &#127867;</h1>
+    <p><strong> Your response has been recorded.</strong></p>
+    <span>Submit other feedback &#128073;</span> <a href="/feed">Click Here</a>
+</div>
+
+<!--Displaying footer here-->
+<footer class="footer mt-auto py-3 bg-dark" style=" width: 100%; position: absolute; bottom: 0;">
+    <div class="container">
+        <span class="text-muted text-light bg-dark">Credits: Lovish {B.Tech (I.T.)} </span>
+    </div>
+</footer>
+
+{% endblock body %}

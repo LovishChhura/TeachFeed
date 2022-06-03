@@ -5,4 +5,5 @@ from . import views
 
 urlpatterns = [
     path('',views.feed, name="feed"),
+    path('thanks/',views.thanks, name="thanks"),
 ]
