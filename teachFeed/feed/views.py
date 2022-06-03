@@ -2,6 +2,11 @@ from django.shortcuts import render, HttpResponse
 from .models import Department, Teacher, Subject, Feed
 # Create your views here.
 def feed(request):
+    dep=Department.objects.all()
+    teach=Teacher.objects.all()
+    sub=Subject.objects.all()
+    params={'dep':dep, 'teach': teach, 'sub': sub}
+    #print(params)
     if request.method=="POST":
         branch = request.POST.get('branch','')
         depTeach = request.POST.get('depTeach','')
@@ -28,4 +33,4 @@ def feed(request):
         feed.save()
         return HttpResponse("Success")
 
-    return render(request,"feed/feed.html")
+    return render(request,"feed/feed.html",params)

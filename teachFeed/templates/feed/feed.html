@@ -18,21 +18,10 @@
             <label for="branch">Choose Your Branch:</label>
             <select name="branch" id="branch">
                 <option value="none">---</option>
-                <option value="it">IT</option>
-                <option value="cse">CSE</option>
-                <option value="ece">ECE</option>
-                <option value="ce">CE</option>
-                <option value="me">ME</option>
-                <option value="bca">BCA</option>
-                <option value="bcom">B.COM</option>
-                <option value="BBA">BBA</option>
-                <option value="mba">MBA</option>
-            </select>
-            <br><br>
-            <label for="depTeach">Department of teacher:</label>
-            <select name="depTeach" id="depTeach">
-                <option value="none">---</option>
-                <option value="IT">IT</option>
+                {% for d in dep %}
+                <option value="{{d.department}}">{{d.department}}</option>
+                {% endfor %}
+                <!--<option value="IT">IT</option>
                 <option value="CSE">CSE</option>
                 <option value="ECE">ECE</option>
                 <option value="CE">CE</option>
@@ -40,14 +29,34 @@
                 <option value="BCA">BCA</option>
                 <option value="BCOM">B.COM</option>
                 <option value="BBA">BBA</option>
-                <option value="MBA">MBA</option>
+                <option value="MBA">MBA</option>-->
+            </select>
+            <br><br>
+            <label for="depTeach">Department of teacher:</label>
+            <select name="depTeach" id="depTeach">
+                <option value="none">---</option>
+                {% for d in dep %}
+                <option value="{{d.department}}">{{d.department}}</option>
+                {% endfor %}
+                <!--<option value="IT">IT</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="CE">CE</option>
+                <option value="ME">ME</option>
+                <option value="BCA">BCA</option>
+                <option value="BCOM">B.COM</option>
+                <option value="BBA">BBA</option>
+                <option value="MBA">MBA</option>-->
             </select>
             <br><br>
             <label for="teacherName">Teacher's name:</label>
             <select name="teacherName" id="teacherName">
                 <option value="none">---</option>
-                <option value="teacher1">Teacher1</option>
-                <option value="teacher2">Teacher2</option>
+                {% for t in teach %}
+                <option value="{{t.name}}">{{t.name}}</option>
+                {% endfor %}
+                <!--<option value="teacher1">Teacher1</option>
+                <option value="teacher2">Teacher2</option>-->
             </select>
             <br><br>
             <label for="sem">Semester:</label>
@@ -66,8 +75,11 @@
             <label for="subject">Subject:</label>
             <select name="subject" id="subject">
                 <option value="none">---</option>
-                <option value="subject1">subject1</option>
-                <option value="subject2">subject2</option>
+                {% for s in sub %}
+                <option value="{{s.name}}">{{s.name}}</option>
+                {% endfor %}
+                <!--<option value="subject1">subject1</option>
+                <option value="subject2">subject2</option>-->
             </select>
             <br><br>
         </div>
