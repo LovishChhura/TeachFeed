@@ -41,19 +41,19 @@
 
         </div>
         <div class="container">
-            <p class="text-center">Feedback</p>
+            <p class="text-center"><em>Feedback</em></p>
         </div>
 
         <div class="container" id="thirddiv">
             <div style="width: 120px;" class="third" id="a">
                 <table>
                     <tr>
-                        <td class="">Faculty: </td>
-                        <td>teacher1</td>
+                        <td class=""><strong>Faculty: </strong></td>
+                        <td>{{teacherName}}</td>
                     </tr>
                     <tr>
-                        <td class="">Subject:</td>
-                        <td>subject1</td>
+                        <td class=""><strong>Subject:</strong></td>
+                        <td>{{subject}}</td>
                     </tr>
 
                 </table>
@@ -61,17 +61,17 @@
             <div style="width: 120px;" class="third" id=" b">
                 <table style="margin-left: 255px;">
                     <tr>
-                        <td class="">Program/ Course:</td>
-                        <td>it</td>
+                        <td class=""><strong>Program/ Course:</strong></td>
+                        <td>{{depTeach}}</td>
                     </tr>
                     <tr>
-                        <td class="">Semester:</td>
-                        <td>1</td>
+                        <td class=""><strong>Semester:</strong></td>
+                        <td>{{sem}}</td>
                     </tr>
                 </table>
             </div>
             <div style="width: 120px;" class="third " id="c">
-                Range: 1 to 10
+                <strong>Range</strong>: 1 to 10
             </div>
             <div id="d">
                 <h5 id="per1">Overall Performance</h5>
@@ -162,10 +162,10 @@
             // Set Data
             var data = google.visualization.arrayToDataTable([
                 ['Price', 'Size'],
-                ['A', 0], ['B', 2], ['C', 4], ['D', 1], ['E', 6],
-                ['F', 3], ['G', 8], ['H', 5],
-                ['I', 10], ['J', 7], ['K', 9],
-                ['L', 7], ['M', 3], ['N', 6], ['O', 7]
+                ['A', {{interact}}], ['B', {{softSkill}}], ['C', {{notes}}], ['D', {{ans}}], ['E', {{pInteract}}],
+                ['F', {{quality}}], ['G', {{extra}}], ['H', {{assignment}}],
+                ['I', {{interrupt}}], ['J', {{mst}}], ['K', {{lecture}}],
+                ['L', {{mooc}}], ['M', {{virtualLab}}], ['N', {{curriculum}}], ['O', {{topic}}]
             ]);
             // Set Options
             var options = {
