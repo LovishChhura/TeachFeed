@@ -23,5 +23,6 @@ admin.site.index_title="Welcome to teachFeed Admin Panel"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
-    path('feed/',include('feed.urls'))
+    path('feed/',include('feed.urls')),
+    path('ifeed/',include('ifeed.urls'))
 ]
