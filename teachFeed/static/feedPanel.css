@@ -1,0 +1,36 @@
+
+#panel{
+    background-color: white;
+    border: 2px solid blue;
+    border-radius: 10px;
+    width: 999px;
+    height: 170px;
+}
+
+.pnl{
+    display: inline;
+}
+
+#p1{
+    position: relative;
+    top: -73px;
+    left: 250px;
+}
+
+#sub1{
+    position: relative;
+    top: -146px;
+    left: 500px;
+}
+
+#sem1{
+    position: relative;
+    top: -219px;
+    left: 750px;
+}
+
+#smt{
+    position: relative;
+    top: -211px;
+    left:373px;
+}

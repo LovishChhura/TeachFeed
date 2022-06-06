@@ -1,0 +1,69 @@
+
+.logo{
+    display: inline-block;
+}
+
+h2{
+    display: inline-block;
+}
+
+#date{
+    display: inline-block;
+}
+
+#mainblock{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#a{
+    float: left;
+}
+
+.third{
+    display: inline;
+}
+
+#c{
+    position: relative;
+    top:-51px;
+    left: 500px;
+}
+
+#d{
+    position: relative;
+    top: -75px;
+    left:750px;
+    border: 2px solid black;
+    width: 200px;
+}
+
+#per2{
+    position: relative;
+    left:60px;
+}
+
+#remarks{
+    position: relative;
+    top:-850px;
+    left:290px;
+    border: 2px solid black;
+    width: 320px;
+}
+
+#chart1{
+    position: relative;
+    top:-90px;
+
+}
+
+#fques{
+    position: relative;
+    top: -90px;
+}
+
+#lastblock{
+    position: relative;
+    top: -70px;
+}

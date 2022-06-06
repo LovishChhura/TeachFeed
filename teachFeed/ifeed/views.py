@@ -5,16 +5,24 @@ from django.contrib import messages
 def ifeed(request):
     return render(request,'ifeed/ifeedHome.html')
 
-def login(request):
+def tlogin(request):
     if request.method == "POST":
         acscode = request.POST['acscode']
         access= Taccess.objects.all()
         for i in access:
             if acscode==i.accesscd:
                 stDepartment={'stDepartment':acscode}
-                return redirect('ifeed')
+                return redirect('feedPanel')
             if acscode!=i.accesscd:
                 messages.error(request, "Invalid Credentials")
 
 
+    return redirect('ifeed')
+
+def feedPanel(request):
+    if request.method=="POST":
+        return render(request,'ifeed/ifeed.html')
+    return render(request,'ifeed/feedPanel.html')
+
+def tlogout(request):
     return redirect('ifeed')

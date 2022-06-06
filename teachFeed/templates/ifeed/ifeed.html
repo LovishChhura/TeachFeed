@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Added external css and js files -->
+    <link rel="stylesheet" href="../../static/ifeed.css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <title>ifeed</title>
+</head>
+
+<body>
+    <button onclick="window.print()">Print</button>
+    <a href="/ifeed/feedPanel/">Back</a>
+    <div class="container" id="mainblock">
+        <div class="container">
+
+            <!--displaying logo here -->
+
+            <span class="" id="logo">
+                <a href="https://www.davietjal.org/" target="_blank">
+                    <img src="/static/img/davietlogo.png" width="10%" height="10%" />
+                </a>
+            </span>
+
+            <span class="container mx-3" id="">
+                <h2><u>DAV Institute of Engineering & Technology, Jalandhar</u></h2>
+            </span>
+
+            <span id="d-flex mx-3">
+                <p style="display: inline-block;" id="date"></p>
+            </span>
+
+        </div>
+        <div class="container">
+            <p class="text-center">Feedback</p>
+        </div>
+
+        <div class="container" id="thirddiv">
+            <div style="width: 120px;" class="third" id="a">
+                <table>
+                    <tr>
+                        <td class="">Faculty: </td>
+                        <td>teacher1</td>
+                    </tr>
+                    <tr>
+                        <td class="">Subject:</td>
+                        <td>subject1</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div style="width: 120px;" class="third" id=" b">
+                <table style="margin-left: 255px;">
+                    <tr>
+                        <td class="">Program/ Course:</td>
+                        <td>it</td>
+                    </tr>
+                    <tr>
+                        <td class="">Semester:</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="width: 120px;" class="third " id="c">
+                Range: 1 to 10
+            </div>
+            <div id="d">
+                <h5 id="per1">Overall Performance</h5>
+                <h5 id="per2">10</h5>
+            </div>
+
+
+
+        </div>
+        <!--thirddiv close-->
+
+
+        <div class="container" id="centerblock">
+            <div id="chart1">
+                <div id="myChart" style="width:100%; max-width:600px; height:500px;"></div>
+            </div>
+            <div id="fques">
+                <h6>Feedback Questions</h6>
+                A. There was positive interaction between students and teacher ?
+                </br>
+                B. Soft skill of subject in-charge in handling of contents?</br>
+                C. Online learning materials/notes provided by the subject in-charge in enchancing my understanding of
+                the
+                subject?</br>
+                D. The teacher thoroughly answered the subjects questions?</br>
+                E. There was positive interaction between students and teacher?</br>
+                F. Quality of work was emphasized more than Quatity?</br>
+                G. You were encouraged to do extra reading about the course material?</br>
+                H. The teacher gave assignments that were useful for learning subject matter?</br>
+                I. Student were free to interrupt presentations if points needed clarification?</br>
+                J. The MSTs were appropriately framed covering all topics of syllabus?</br>
+                K. Lectures were held regularly and on time?</br>
+                L. Students were Introduced regarding Certifications/ Registrations for MOOC's based online course.</br>
+                M. Students were Introduced with relevent information on "Virtual Labs" for the course?</br>
+                N. Course curriculum is updated completely?</br>
+                O. All the contemporary topics related to field are discussed thoroughly?</br>
+            </div>
+        </div>
+        <!--center block closed-->
+
+        <div class="container" id="remarks">
+            No. of students : 7 </br>
+            Blessed to have you: 1 </br>
+            Teacher is very cooperative: 1 </br>
+            Very helpful and cooperative teacher: 1 </br>
+        </div>
+
+        <div class="container" id="lastblock">
+            <span >HOD</span>
+            <span style="margin-left: 270px;">Dean (academics)</span>
+            <span style="margin-left: 270px;">Principal</span>
+        </div>
+
+    </div>
+    <!--main div close-->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  -->
+
+    <!-- Added external javascript here-->
+
+    <script src="../../static/js/ifeed.js"></script>
+    <script>
+        /* n = new Date();
+         y = n.getFullYear();
+         m = n.getMonth() + 1;
+         d = n.getDate();
+         document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+         document.getElementById("date").innerHTML = Date();*/
+    </script>
+
+    <script>
+        google.charts.load('current', { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            // Set Data
+            var data = google.visualization.arrayToDataTable([
+                ['Price', 'Size'],
+                ['A', 0], ['B', 2], ['C', 4], ['D', 1], ['E', 6],
+                ['F', 3], ['G', 8], ['H', 5],
+                ['I', 10], ['J', 7], ['K', 9],
+                ['L', 7], ['M', 3], ['N', 6], ['O', 7]
+            ]);
+            // Set Options
+            var options = {
+                title: 'Subject Performance',
+                hAxis: { title: 'Feedback Questions' },
+                vAxis: { title: 'Marks' },
+                legend: 'none'
+            };
+            // Draw
+            var chart = new google.visualization.LineChart(document.getElementById('myChart'));
+            chart.draw(data, options);
+        }
+    </script>
+</body>
+
+</html>
