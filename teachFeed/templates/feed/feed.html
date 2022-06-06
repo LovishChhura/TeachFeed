@@ -180,6 +180,30 @@
 
         </div>
 
+        <div class="tab mb-3">
+            <label for="" class="form-label">1: 1: Bless to have this teacher ?</label><br />
+            <select name="bless" id="bless">
+              <option value="none">---</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+            <br />
+            <label for="" class="form-label">2: Teacher is very cooperative ?</label><br />
+            <select name="cooperative" id="cooperative">
+              <option value="none">---</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+            <br />
+            <label for="" class="form-label">3: Very helpful and cooperative teacher ?</label><br />
+            <select name="helpful" id="helpful">
+              <option value="none">---</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+            <br />
+          </div>
+
         <div style="overflow:auto;">
             <div style="float:right;">
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -189,6 +213,7 @@
 
         <!-- Circles which indicates the steps of the form: -->
         <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>

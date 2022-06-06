@@ -52,6 +52,9 @@ def feedPanel(request):
         virtualLab1 = 0
         curriculum1 = 0
         topic1 = 0
+        bless1 = 0
+        cooperative1 = 0
+        helpful1 = 0
         for e in queryset:
             interact1 = interact1+int(e.interact)
             softSkill1 = softSkill1+int(e.softSkill)
@@ -68,6 +71,9 @@ def feedPanel(request):
             virtualLab1 = virtualLab1+int(e.virtualLab)
             curriculum1 = curriculum1+int(e.curriculum)
             topic1 = topic1+int(e.topic)
+            bless1=bless1+int(e.bless)
+            cooperative1=cooperative1+int(e.cooperative)
+            helpful1=helpful1+int(e.helpful)
 
 
         interact2 = round (interact1 / n, 2)
@@ -85,8 +91,11 @@ def feedPanel(request):
         virtualLab2=round(virtualLab1/n,2)
         curriculum2=round(curriculum1/n,2)
         topic2=round(topic1/n,2)
+        bless2=bless1
+        cooperative2=cooperative1
+        helpful2=helpful1
 
-        params1 = {'depTeach': depTeach3, 'teacherName': teacherName3, 'subject': subject3, 'sem': sem3, 'interact': interact2, 'softSkill': softSkill2, 'notes': notes2, 'ans': ans2, 'pInteract': pInteract2, 'quality': quality2, 'extra': extra2, 'assignment': assignment2, 'interrupt': interrupt2, 'mst':mst2, 'lecture':lecture2, 'mooc': mooc2, 'virtualLab': virtualLab2, 'curriculum': curriculum2, 'topic': topic2}
+        params1 = {'depTeach': depTeach3, 'teacherName': teacherName3, 'subject': subject3, 'sem': sem3, 'interact': interact2, 'softSkill': softSkill2, 'notes': notes2, 'ans': ans2, 'pInteract': pInteract2, 'quality': quality2, 'extra': extra2, 'assignment': assignment2, 'interrupt': interrupt2, 'mst':mst2, 'lecture':lecture2, 'mooc': mooc2, 'virtualLab': virtualLab2, 'curriculum': curriculum2, 'topic': topic2, 'n':n, 'bless':bless2, 'cooperative':cooperative2, 'helpful':helpful2}
 
         return render(request,'ifeed/ifeed.html',params1)
     return render(request,'ifeed/feedPanel.html',params)

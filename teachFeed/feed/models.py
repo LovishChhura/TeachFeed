@@ -75,6 +75,9 @@ class Feed(models.Model):
     virtualLab = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
     curriculum = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
     topic = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    bless = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    cooperative = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
+    helpful = models.IntegerField(validators=[MaxValueValidator(10), MinValueValidator(1)], help_text='1-10')
 
     def __str__(self):
         x=str(self.sno)
