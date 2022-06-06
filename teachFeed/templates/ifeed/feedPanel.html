@@ -21,8 +21,11 @@
             <label for="teacherName">Teacher's name:</label></br>
             <select name="teacherName" id="teacherName">
                 <option value="none">---</option>
-                <option value="teacher1">Teacher1</option>
-                <option value="teacher2">Teacher2</option>
+                {% for t in teach %}
+                <option value="{{t.name}}">{{t.name}}</option>
+                {% endfor %}
+                <!--<option value="teacher1">Teacher1</option>
+                <option value="teacher2">Teacher2</option>-->
             </select>
             <br><br>
         </div>
@@ -30,7 +33,10 @@
             <label for="depTeach">Program/ Course:</label></br>
             <select name="depTeach" id="depTeach">
                 <option value="none">---</option>
-                <option value="it">IT</option>
+                {% for d in dep %}
+                <option value="{{d.department}}">{{d.department}}</option>
+                {% endfor %}
+                <!--<option value="it">IT</option>
                 <option value="cse">CSE</option>
                 <option value="ece">ECE</option>
                 <option value="ce">CE</option>
@@ -38,7 +44,7 @@
                 <option value="bca">BCA</option>
                 <option value="bcom">B.COM</option>
                 <option value="BBA">BBA</option>
-                <option value="mba">MBA</option>
+                <option value="mba">MBA</option>-->
             </select>
         </div>
         <br><br>
@@ -46,8 +52,11 @@
             <label for="subject">Subject:</label></br>
             <select name="subject" id="subject">
                 <option value="none">---</option>
-                <option value="subject1">subject1</option>
-                <option value="subject2">subject2</option>
+                {% for s in sub %}
+                <option value="{{s.name}}">{{s.name}}</option>
+                {% endfor %}
+                <!--<option value="subject1">subject1</option>
+                <option value="subject2">subject2</option>-->
             </select>
             <br><br>
         </div>
@@ -55,14 +64,14 @@
             <label for="sem">Semester:</label></br>
             <select name="sem" id="sem">
                 <option value="none">---</option>
-                <option value="s1">1st</option>
-                <option value="s2">2nd</option>
-                <option value="s3">3rd</option>
-                <option value="s4">4th</option>
-                <option value="s5">5th</option>
-                <option value="s6">6th</option>
-                <option value="s7">7th</option>
-                <option value="s8">8th</option>
+                <option value="1">1st</option>
+                <option value="2">2nd</option>
+                <option value="3">3rd</option>
+                <option value="4">4th</option>
+                <option value="5">5th</option>
+                <option value="6">6th</option>
+                <option value="7">7th</option>
+                <option value="8">8th</option>
             </select>
             <br><br>
         </div>
