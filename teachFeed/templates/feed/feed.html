@@ -9,9 +9,9 @@
 {% block login %}
 <form class="d-flex">
 
-    <a href="/logout" role="button"  class="btn btn-outline-primary m-2 my-sm-0 " >
-      Logout </a>
-  </form>
+    <a href="/logout" role="button" class="btn btn-outline-primary m-2 my-sm-0 ">
+        Logout </a>
+</form>
 {% endblock login %}
 {% block body %}
 <div class="container" id="">
@@ -40,7 +40,7 @@
             </select>
             <br><br>
             <label for="depTeach">Department of teacher:</label>
-            <select name="depTeach" id="depTeach">
+            <select name="depTeach"  id="depTeach">
                 <option value="none">---</option>
                 {% for d in dep %}
                 <option value="{{d.department}}">{{d.department}}</option>
@@ -101,14 +101,17 @@
                 ?</label><br />
             <input type="number" id="interact" name="interact" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="softSkill" class="form-label">2: Soft skill of subject in-charge in handling of contents ?</label><br />
+            <label for="softSkill" class="form-label">2: Soft skill of subject in-charge in handling of contents
+                ?</label><br />
             <input type="number" id="softSkill" name="softSkill" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="notes" class="form-label">3: Online learning materials /notes provided by the subject in-charge in
+            <label for="notes" class="form-label">3: Online learning materials /notes provided by the subject in-charge
+                in
                 enchancing my understanding of the subject ?</label><br />
             <input type="number" id="notes" name="notes" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="ans" class="form-label">4: The teacher thoroughly answered the students questions ?</label><br />
+            <label for="ans" class="form-label">4: The teacher thoroughly answered the students questions
+                ?</label><br />
             <input type="number" id="ans" name="ans" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
 
@@ -133,9 +136,11 @@
                 ?</label><br />
             <input type="number" id="extra" name="extra" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="assignment" class="form-label">8: The teacher gave assignments that were useful for learning subject
+            <label for="assignment" class="form-label">8: The teacher gave assignments that were useful for learning
+                subject
                 matter ?</label><br />
-            <input type="number" id="assignment" name="assignment" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="assignment" name="assignment" min="1" max="10" style="width:25%"><span>
+                (1-10)</span>
             <br />
 
         </div>
@@ -157,7 +162,8 @@
             <label for="lecture" class="form-label">11: Lectures were held regularly and on time ?</label><br />
             <input type="number" id="lecture" name="lecture" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
-            <label for="mooc" class="form-label">12: Students were introduced regarding certifications /Registrations for
+            <label for="mooc" class="form-label">12: Students were introduced regarding certifications /Registrations
+                for
                 MOOC's based online course .</label><br />
             <input type="number" id="mooc" name="mooc" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
@@ -165,14 +171,18 @@
         </div>
 
         <div class="tab mb-3">
-            <label for="virtualLab" class="form-label">13: Students were introduced with the relevent information on "Vitual Labs"
+            <label for="virtualLab" class="form-label">13: Students were introduced with the relevent information on
+                "Vitual Labs"
                 for the course ?</label><br />
-            <input type="number" id="virtualLab" name="virtualLab" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="virtualLab" name="virtualLab" min="1" max="10" style="width:25%"><span>
+                (1-10)</span>
             <br />
             <label for="curriculum" class="form-label">14: course curriculum is updated completely ?</label><br />
-            <input type="number" id="curriculum" name="curriculum" min="1" max="10" style="width:25%"><span> (1-10)</span>
+            <input type="number" id="curriculum" name="curriculum" min="1" max="10" style="width:25%"><span>
+                (1-10)</span>
             <br />
-            <label for="topic" class="form-label">15: All the contemporary topics related to fields are discussed thoroughly
+            <label for="topic" class="form-label">15: All the contemporary topics related to fields are discussed
+                thoroughly
                 ?</label><br />
             <input type="number" id="topic" name="topic" min="1" max="10" style="width:25%"><span> (1-10)</span>
             <br />
@@ -183,26 +193,26 @@
         <div class="tab mb-3">
             <label for="" class="form-label">1: 1: Bless to have this teacher ?</label><br />
             <select name="bless" id="bless">
-              <option value="none">---</option>
-              <option value="1">Yes</option>
-              <option value="0">No</option>
+                <option value="none">---</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
             </select>
             <br />
             <label for="" class="form-label">2: Teacher is very cooperative ?</label><br />
             <select name="cooperative" id="cooperative">
-              <option value="none">---</option>
-              <option value="1">Yes</option>
-              <option value="0">No</option>
+                <option value="none">---</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
             </select>
             <br />
             <label for="" class="form-label">3: Very helpful and cooperative teacher ?</label><br />
             <select name="helpful" id="helpful">
-              <option value="none">---</option>
-              <option value="1">Yes</option>
-              <option value="0">No</option>
+                <option value="none">---</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
             </select>
             <br />
-          </div>
+        </div>
 
         <div style="overflow:auto;">
             <div style="float:right;">
