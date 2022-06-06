@@ -20,7 +20,7 @@
         <div class="pnl" id="t1">
             <label for="teacherName">Teacher's name:</label><br/>
             <select name="teacherName" id="teacherName">
-                <option value="none">---</option>
+                <option value="" disabled selected hidden>---</option>
                 {% for t in teach %}
                 <option value="{{t.name}}">{{t.name}}</option>
                 {% endfor %}
@@ -32,7 +32,7 @@
         <div class="pnl" id="p1">
             <label for="depTeach">Program/ Course:</label><br/>
             <select name="depTeach" id="depTeach">
-                <option value="none">---</option>
+                <option value="" disabled selected hidden>---</option>
                 {% for d in dep %}
                 <option value="{{d.department}}">{{d.department}}</option>
                 {% endfor %}
@@ -51,7 +51,7 @@
         <div class="pnl" id="sub1">
             <label for="subject">Subject:</label><br/>
             <select name="subject" id="subject">
-                <option value="none">---</option>
+                <option value="" disabled selected hidden>---</option>
                 {% for s in sub %}
                 <option value="{{s.name}}">{{s.name}}</option>
                 {% endfor %}
@@ -63,7 +63,7 @@
         <div class="pnl" id="sem1">
             <label for="sem">Semester:</label><br/>
             <select name="sem" id="sem">
-                <option value="none">---</option>
+                <option value="" disabled selected hidden>---</option>
                 <option value="1">1st</option>
                 <option value="2">2nd</option>
                 <option value="3">3rd</option>
