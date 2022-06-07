@@ -30,7 +30,7 @@ def feed(request):
         topic = request.POST.get('topic')
         bless = request.POST.get('bless')
         cooperative = request.POST.get('cooperative')
-        helpful = request.POST.get('topic')
+        helpful = request.POST.get('helpful')
         feed=Feed(branch=branch, depTeach=depTeach, teacherName=teacherName,  sem=sem,subject=subject, interact=interact, softSkill=softSkill,notes=notes, ans=ans, pInteract=pInteract, quality=quality, extra=extra, assignment=assignment, interrupt=interrupt, mst=mst, lecture=lecture, mooc=mooc, virtualLab=virtualLab, curriculum=curriculum, topic=topic, bless=bless, cooperative=cooperative, helpful=helpful)
 
         feed.save()
