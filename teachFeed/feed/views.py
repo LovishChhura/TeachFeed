@@ -2,9 +2,9 @@ from django.shortcuts import render, HttpResponse, redirect
 from .models import Department, Teacher, Subject, Feed
 # Create your views here.
 def feed(request):
-    dep=Department.objects.all()
-    teach=Teacher.objects.all()
-    sub=Subject.objects.all()
+    dep=Department.objects.all().order_by('department')
+    teach=Teacher.objects.all().order_by('name')
+    sub=Subject.objects.all().order_by('name')
     params={'dep':dep, 'teach': teach, 'sub': sub}
     #print(params)
     if request.method=="POST":
