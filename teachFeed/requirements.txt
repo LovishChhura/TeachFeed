@@ -6,3 +6,6 @@ django==4.0.3
 # mysqlclient==8.0.27
 pip install mysqlclient
 pip install python-decouple
+
+pip install gunicorn
+pip install whitenoise
